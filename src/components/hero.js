@@ -1,11 +1,17 @@
+import resumeFile from "../assets/files/resume.pdf";
+import profileImage from "../assets/images/my-photo.png";
 import i18next from "../i18n/index.js";
 
 export function Hero() {
-  return `
+	return `
     <section class="hero-container fade-in">
       <div class="hero-content">
         <div class="hero-image-wrapper">
-          <img src="/img/my-photo.png" alt="${i18next.t("name")}" class="profile-img">
+   <img 
+              src="${profileImage}" 
+            alt="${i18next.t("name")}" 
+            class="profile-img"
+          >
           <div class="image-glow"></div>
 
           <div class="floating-icon icon-1">
@@ -35,14 +41,16 @@ export function Hero() {
 
           <p class="hero-description">
             ${
-              i18next.language.includes("fa")
-                ? "توسعه‌دهنده فرانت‌اندم با علاقه به ساخت تجربه‌های کاربری زیبا و مدرن."
-                : "Frontend developer with a passion for building beautiful and modern user experiences."
-            }
+							i18next.language.includes("fa")
+								? "توسعه‌دهنده فرانت‌اندم با علاقه به ساخت تجربه‌های کاربری زیبا و مدرن."
+								: "Frontend developer with a passion for building beautiful and modern user experiences."
+						}
           </p>
+ <a href="${resumeFile}" download class="btn btn-primary">
+    ${i18next.language.includes("fa") ? "دانلود رزومه" : "Download Resume"}
+  </a>
         </div>
       </div>
     </section>
   `;
 }
-
