@@ -1,70 +1,154 @@
-import i18next from '../i18n/index.js'
+import i18next from "../i18n/index.js";
 
 export function Skills() {
+	const skillGroups = [
+		{
+			title: "Next.js",
+			icon: "devicon-nextjs-plain",
+			items: [
+				"App Router",
+				"API Routes",
+				"Server Actions",
+				"SSR / SSG / ISR / CSR",
+				"Server Components",
+				"Suspense",
+				"Performance Optimization",
+				"JWT Authentication",
+			],
+		},
+		{
+			title: "React & Ecosystem",
+			icon: "devicon-react-original",
+			items: [
+				"JSX",
+				"Functional Components",
+				"Hooks",
+				"Component Architecture",
+				"Context API",
+				"Redux / Redux Toolkit",
+				"Zustand",
+				"React Router",
+				"TanStack Query",
+				"React Hook Form",
+				"Zod",
+			],
+		},
+		{
+			title: "JavaScript / TypeScript",
+			icon: "devicon-javascript-plain",
+			items: [
+				"Modern JavaScript ES6+",
+				"TypeScript Interfaces",
+				"TypeScript Generics",
+				"Promises",
+				"Async / Await",
+				"Fetch API",
+				"Axios",
+				"DOM Manipulation",
+				"Functional Programming Concepts",
+			],
+		},
+		{
+			title: "Web Fundamentals",
+			icon: "devicon-html5-plain",
+			items: [
+				"REST API",
+				"JSON",
+				"JWT Authentication",
+				"Cookies",
+				"SPA Concepts",
+				"Client-Side Rendering",
+			],
+		},
+		{
+			title: "HTML & CSS",
+			icon: "devicon-css3-plain",
+			items: [
+				"HTML5",
+				"Semantic Tags",
+				"CSS3",
+				"Responsive Web Design",
+				"Flexbox",
+				"CSS Grid",
+				"Media Queries",
+				"Animations",
+			],
+		},
+		{
+			title: "UI & Styling",
+			icon: "devicon-tailwindcss-plain",
+			items: [
+				"Tailwind CSS",
+				"Styled-Components",
+				"CSS Modules",
+				"Material UI",
+				"Headless UI",
+				"ShadCN UI",
+			],
+		},
+		{
+			title: "Tools & Workflow",
+			icon: "devicon-git-plain",
+			items: [
+				"Git",
+				"GitFlow",
+				"GitHub",
+				"npm / yarn / pnpm",
+				"Postman",
+				"Figma",
+				"Vite",
+				"MongoDB",
+			],
+		},
+	];
 
-  const skillGroups = [
-   {
-  title: i18next.t("skills.frontend"),
-  items: [
-    { name: "React", icon: "devicon-react-original" },
-    { name: "JavaScript", icon: "devicon-javascript-plain" },
-    { name: "TypeScript", icon: "devicon-typescript-plain" },
-    { name: "Next.js", icon: "devicon-nextjs-plain" },
-    { name: "HTML5", icon: "devicon-html5-plain" },
-    { name: "CSS3", icon: "devicon-css3-plain" }
-  ]
-},
-{
-  title: i18next.t("skills.tools"),
-  items: [
-    { name: "Tailwind", icon: "devicon-tailwindcss-plain" },
-    { name: "Git", icon: "devicon-git-plain" },
-    { name: "GitHub", icon: "devicon-github-original" },
-    { name: "Vite", icon: "devicon-vitejs-plain" },
-    { name: "Node.js", icon: "devicon-nodejs-plain" },
-    { name: "MongoDB", icon: "devicon-mongodb-plain" }
-  ]
+	return `
+	<section class="skills-section fade-in">
+
+		<div class="skills-hero glass-card">
+			<span class="skills-eyebrow">Technical Stack</span>
+			<h2 class="section-title">✨ ${i18next.t("skills_title")}</h2>
+			<p class="skills-intro">
+				A practical frontend skill set focused on building responsive, modern, scalable and user-friendly web applications.
+			</p>
+		</div>
+
+		<div class="skills-modern-grid">
+			${skillGroups
+				.map(
+					(group) => `
+					<article class="skill-detail-card">
+						<div class="skill-card-top">
+							<div class="skill-main-icon">
+								<i class="${group.icon} colored"></i>
+							</div>
+
+							<div>
+								<h3>${group.title}</h3>
+								<span>${group.items.length} topics</span>
+							</div>
+						</div>
+
+						<div class="skill-tags">
+							${group.items
+								.map(
+									(item) => `
+									<span class="skill-tag">
+										${item}
+									</span>
+								`,
+								)
+								.join("")}
+						</div>
+					</article>
+				`,
+				)
+				.join("")}
+		</div>
+
+	</section>
+	`;
 }
 
-  ];
-
-  return `
-  <section class="skills-section fade-in">
-
-    <div class="skills-header">
-      <h2 class="section-title">✨ ${i18next.t('skills_title')}</h2>
-    </div>
-
-    ${skillGroups.map(group => `
-      <div class="skills-group">
-
-        <h3 class="skills-group-title">
-          ${group.title}
-        </h3>
-
-        <div class="modern-skills-grid">
-
-          ${group.items.map(skill => `
-            <div class="skill-item-modern">
-
-              <div class="skill-icon-box">
-                <i class="${skill.icon} colored"></i>
-              </div>
-
-              <div class="skill-name">
-                ${skill.name}
-              </div>
-
-            </div>
-          `).join("")}
-
-        </div>
-
-      </div>
-    `).join("")}
-
-  </section>
-  `
-}
 
 

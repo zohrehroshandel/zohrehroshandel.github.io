@@ -4,7 +4,6 @@ import { initRouter, router } from "./router.js";
 import "./styles/style.css";
 import { loadTheme, toggleTheme } from "./utils/theme.js";
 
-
 function render() {
 	const lang = i18next.language?.includes("fa") ? "fa" : "en";
 
@@ -24,6 +23,12 @@ function render() {
 	document.getElementById("themeBtn")?.addEventListener("click", toggleTheme);
 
 	loadTheme();
+	if (window.location.pathname === "/projects") {
+		setTimeout(() => {
+			const event = new Event("initProjects");
+			window.dispatchEvent(event);
+		}, 50);
+	}
 }
 
 function changeLanguage() {

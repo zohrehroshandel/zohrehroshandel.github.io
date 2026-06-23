@@ -1,9 +1,9 @@
 import i18next from "../i18n/index.js";
 
 export function Header() {
-  const path = window.location.pathname;
+	const path = window.location.pathname;
 
-  return `
+	return `
     <header class="header">
       <nav class="nav">
         <a href="/" data-link class="nav-link ${path === "/" ? "active" : ""}">
@@ -20,6 +20,11 @@ export function Header() {
         <a href="/contact" data-link class="nav-link ${path === "/contact" ? "active" : ""}">
           ${i18next.t("nav.contact")}
         </a>
+        <a href="/projects" data-link 
+  class="nav-link ${path === "/projects" ? "active" : ""}">
+  ${i18next.t("nav.projects")}
+</a>
+
       </nav>
 
       <div class="header-actions">
@@ -34,4 +39,3 @@ export function Header() {
     </header>
   `;
 }
-
