@@ -156,54 +156,51 @@ d="M22 16.9v3a2 2 0 01-2.2 2 19.7 19.7 0 01-8.6-3.1 19.3 19.3 0 01-6-6A19.7 19.7
         </div>
       </div>
     </section>
-  `}var $=`/project-images`,Gn=[{titleKey:`projects.htmlcss_title`,descKey:`projects.htmlcss_desc`,images:[`${$}/html-css.png`]},{titleKey:`projects.flowershop_title`,descKey:`projects.flowershop_desc`,images:[`${$}/flowershop1.png`,`${$}/flowershop2.png`,`${$}/flowershop3.png`,`${$}/flowershop4.png`]},{titleKey:`projects.quiz_title`,descKey:`projects.quiz_desc`,images:[`${$}/quiz-app1.png`,`${$}/quiz-app2.png`,`${$}/quiz-app3.png`,`${$}/quiz-app4.png`]},{titleKey:`projects.starbucks_title`,descKey:`projects.starbucks_desc`,images:[`${$}/starbox.png`,`${$}/starbox1.png`]}],Kn=Array.from({length:16},(e,t)=>`${$}/hanbok${t+1}.png`);function qn(){return`
-    <section class="projects-page fade-in">
-    <h2 class="section-title">
-  ${P.t(`projects.title`)}
-</h2>
-
-      <!-- Hanbok Section -->
-      <div class="project-block glass-card">
-        <div class="project-header">
-       <h3>${P.t(`projects.hanbok_title`)}</h3>
-<p>${P.t(`projects.hanbok_desc`)}</p>
-
-        </div>
-        <div class="swiper hanbokSwiper">
-          <div class="swiper-wrapper">
-            ${Kn.map(e=>`
-              <div class="swiper-slide">
-                <img src="${e}" alt="Hanbok project">
-              </div>
-            `).join(``)}
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
+  `}var $=`/project-images`,Gn=[{titleKey:`projects.htmlcss_title`,descKey:`projects.htmlcss_desc`,images:[`${$}/html-css.png`],githubLink:`https://github.com/zohrehroshandel/html-css-practice`},{titleKey:`projects.flowershop_title`,descKey:`projects.flowershop_desc`,images:[`${$}/flowershop1.png`,`${$}/flowershop2.png`,`${$}/flowershop3.png`,`${$}/flowershop4.png`],githubLink:`https://github.com/zohrehroshandel/flowershop-exampel-project`},{titleKey:`projects.quiz_title`,descKey:`projects.quiz_desc`,images:[`${$}/quiz-app1.png`,`${$}/quiz-app2.png`,`${$}/quiz-app3.png`,`${$}/quiz-app4.png`],githubLink:`https://github.com/zohrehroshandel/quiez-app`},{titleKey:`projects.starbucks_title`,descKey:`projects.starbucks_desc`,images:[`${$}/starbox.png`,`${$}/starbox1.png`],githubLink:`https://github.com/zohrehroshandel/starbox`}],Kn=Array.from({length:16},(e,t)=>`${$}/hanbok${t+1}.png`);function qn(){return`
+    <section class="project-block glass-card">
+      <div class="project-header">
+        <h3>${L.t(`projects.hanbok_title`)}</h3>
+        <p>${L.t(`projects.hanbok_desc`)}</p>
       </div>
 
-      <!-- Other Projects -->
-      ${Gn.map(e=>`
-        <div class="project-block glass-card">
-          <div class="project-header">
-         <h3>${P.t(e.titleKey)}</h3>
-<p>${P.t(e.descKey)}</p>
-
-          </div>
-          <div class="swiper projectSwiper">
-            <div class="swiper-wrapper">
-              ${e.images.map(e=>`
+      <div class="swiper hanbokSwiper">
+        <div class="swiper-wrapper">
+          ${Kn.map(e=>`
                 <div class="swiper-slide">
-              <img src="${e}" alt="project image">
-
+                  <img src="${e}" class="project-img" alt="Hanbok project" />
                 </div>
               `).join(``)}
-            </div>
-            <div class="swiper-pagination"></div>
-          </div>
         </div>
-      `).join(``)}
+        <div class="swiper-pagination"></div>
+      </div>
     </section>
   `}function Jn(){return`
+    <div class="projects-page">
+      ${qn()}
+      <div class="other-projects">
+        ${Gn.map(e=>`
+              <div class="project-block glass-card">
+                <div class="project-header">
+                  <h3>${L.t(e.titleKey)}</h3>
+                  <p>${L.t(e.descKey)}</p>
+                  ${e.githubLink?`<a href="${e.githubLink}" target="_blank" rel="noreferrer" class="github-link">GitHub Repository ↗</a>`:``}
+                </div>
+
+                <div class="swiper projectSwiper">
+                  <div class="swiper-wrapper">
+                    ${e.images.map(e=>`
+                          <div class="swiper-slide">
+                            <img src="${e}" class="project-img" alt="project" />
+                          </div>
+                        `).join(``)}
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+            `).join(``)}
+      </div>
+    </div>
+  `}function Yn(){return`
 	<section class="skills-section fade-in">
 
 		<div class="skills-hero glass-card">
@@ -240,9 +237,9 @@ d="M22 16.9v3a2 2 0 01-2.2 2 19.7 19.7 0 01-8.6-3.1 19.3 19.3 0 01-6-6A19.7 19.7
 		</div>
 
 	</section>
-	`}var Yn={"/":Wn,"/about":Ln,"/skills":Jn,"/contact":Vn,"/projects":qn};function Xn(){return Yn[window.location.pathname]||Wn}function Zn(){let e=document.querySelector(`.hanbokSwiper`);e&&!e.swiper&&new Z(e,{modules:[Pn,Fn,In],slidesPerView:1,spaceBetween:20,loop:!0,autoplay:{delay:3500,disableOnInteraction:!1},pagination:{el:e.querySelector(`.swiper-pagination`),clickable:!0}}),document.querySelectorAll(`.projectSwiper`).forEach(e=>{e.swiper||new Z(e,{modules:[Fn],slidesPerView:1,spaceBetween:10,pagination:{el:e.querySelector(`.swiper-pagination`),clickable:!0}})})}function Qn(e){function t(){e(),setTimeout(()=>{window.location.pathname===`/projects`&&Zn()},50)}window.addEventListener(`click`,e=>{let n=e.target.closest(`[data-link]`);if(!n)return;e.preventDefault();let r=n.getAttribute(`href`);window.history.pushState(null,``,r),t()}),window.addEventListener(`popstate`,()=>{t()})}window.addEventListener(`initProjects`,()=>{Zn()});function $n(){let e=document.documentElement.classList.toggle(`dark`);localStorage.setItem(`theme`,e?`dark`:`light`);let t=document.getElementById(`themeBtn`);t&&(t.textContent=e?`☀️`:`🌙`)}function er(){let e=localStorage.getItem(`theme`);e===`dark`&&document.documentElement.classList.add(`dark`);let t=document.getElementById(`themeBtn`);t&&(t.textContent=e===`dark`?`☀️`:`🌙`)}function tr(){let e=L.language?.includes(`fa`)?`fa`:`en`;document.documentElement.dir=e===`fa`?`rtl`:`ltr`,document.documentElement.lang=e;let t=Xn();document.querySelector(`#app`).innerHTML=`
+	`}var Xn={"/":Wn,"/about":Ln,"/skills":Yn,"/contact":Vn,"/projects":Jn};function Zn(){return Xn[window.location.pathname]||Wn}function Qn(){let e={modules:[Pn,Fn,In],slidesPerView:1,loop:!0,autoplay:{delay:3500,disableOnInteraction:!1},pagination:{clickable:!0}},t=document.querySelector(`.hanbokSwiper`);t&&!t.swiper&&new Z(t,e),document.querySelectorAll(`.projectSwiper`).forEach(t=>{t.swiper||new Z(t,{...e,pagination:{el:t.querySelector(`.swiper-pagination`),clickable:!0}})})}function $n(e){function t(){e(),setTimeout(()=>{window.location.pathname===`/projects`&&Qn()},50)}window.addEventListener(`click`,e=>{let n=e.target.closest(`[data-link]`);if(!n)return;e.preventDefault();let r=n.getAttribute(`href`);window.history.pushState(null,``,r),t()}),window.addEventListener(`popstate`,()=>{t()})}window.addEventListener(`initProjects`,()=>{Qn()});function er(){let e=document.documentElement.classList.toggle(`dark`);localStorage.setItem(`theme`,e?`dark`:`light`);let t=document.getElementById(`themeBtn`);t&&(t.textContent=e?`☀️`:`🌙`)}function tr(){let e=localStorage.getItem(`theme`);e===`dark`&&document.documentElement.classList.add(`dark`);let t=document.getElementById(`themeBtn`);t&&(t.textContent=e===`dark`?`☀️`:`🌙`)}function nr(){let e=L.language?.includes(`fa`)?`fa`:`en`;document.documentElement.dir=e===`fa`?`rtl`:`ltr`,document.documentElement.lang=e;let t=Zn();document.querySelector(`#app`).innerHTML=`
     ${ze()}
     <main id="main-content">
       ${t()}
     </main>
-  `,document.getElementById(`langBtn`)?.addEventListener(`click`,nr),document.getElementById(`themeBtn`)?.addEventListener(`click`,$n),er(),window.location.pathname===`/projects`&&setTimeout(()=>{let e=new Event(`initProjects`);window.dispatchEvent(e)},50)}function nr(){let e=L.language?.includes(`fa`)?`en`:`fa`;L.changeLanguage(e,tr)}Qn(tr),Re(tr);
+  `,document.getElementById(`langBtn`)?.addEventListener(`click`,rr),document.getElementById(`themeBtn`)?.addEventListener(`click`,er),tr(),window.location.pathname===`/projects`&&setTimeout(()=>{let e=new Event(`initProjects`);window.dispatchEvent(e)},50)}function rr(){let e=L.language?.includes(`fa`)?`en`:`fa`;L.changeLanguage(e,nr)}$n(nr),Re(nr);
