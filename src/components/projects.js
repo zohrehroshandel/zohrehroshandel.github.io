@@ -1,65 +1,73 @@
-import i18next from "i18next";
-import { basicProjects, hanbokImages } from "../types/project.js";
+import i18next from "../i18n/index";
+import { basicProjects, hanbokImages } from "../types/project";
 
-export function Projects() {
-	return `
-    <section class="projects-page fade-in">
-    <h2 class="section-title">
-  ${i18next.t("projects.title")}
-</h2>
-
-      <!-- Hanbok Section -->
-      <div class="project-block glass-card">
-        <div class="project-header">
-       <h3>${i18next.t("projects.hanbok_title")}</h3>
-<p>${i18next.t("projects.hanbok_desc")}</p>
-
-        </div>
-        <div class="swiper hanbokSwiper">
-          <div class="swiper-wrapper">
-            ${hanbokImages
-							.map(
-								(img) => `
-              <div class="swiper-slide">
-                <img src="${img}" alt="Hanbok project">
-              </div>
-            `,
-							)
-							.join("")}
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
+function renderHanbokSection() {
+  return `
+    <section class="project-block glass-card">
+      <div class="project-header">
+        <h3>${i18next.t("projects.hanbok_title")}</h3>
+        <p>${i18next.t("projects.hanbok_desc")}</p>
       </div>
 
-      <!-- Other Projects -->
-      ${basicProjects
-				.map(
-					(project) => `
-        <div class="project-block glass-card">
-          <div class="project-header">
-         <h3>${i18next.t(project.titleKey)}</h3>
-<p>${i18next.t(project.descKey)}</p>
-
-          </div>
-          <div class="swiper projectSwiper">
-            <div class="swiper-wrapper">
-              ${project.images
-								.map(
-									(img) => `
+      <div class="swiper hanbokSwiper">
+        <div class="swiper-wrapper">
+          ${hanbokImages
+            .map(
+              (img) => `
                 <div class="swiper-slide">
-              <img src="${img}" alt="project image">
-
+                  <img src="${img}" class="project-img" alt="Hanbok project" />
                 </div>
-              `,
-								)
-								.join("")}
-            </div>
-            <div class="swiper-pagination"></div>
-          </div>
+              `
+            )
+            .join("")}
         </div>
-      `,
-				)
-				.join("")}
+        <div class="swiper-pagination"></div>
+      </div>
     </section>
   `;
 }
+
+export function Projects() {
+  return `
+    <div class="projects-page">
+      ${renderHanbokSection()}
+      <div class="other-projects">
+        ${basicProjects
+          .map(
+            (project) => `
+              <div class="project-block glass-card">
+                <div class="project-header">
+                  <h3>${i18next.t(project.titleKey)}</h3>
+                  <p>${i18next.t(project.descKey)}</p>
+                  ${
+                    project.githubLink
+                      ? `<a href="${project.githubLink}" target="_blank" rel="noreferrer" class="github-link">GitHub Repository ↗</a>`
+                      : ""
+                  }
+                </div>
+
+                <div class="swiper projectSwiper">
+                  <div class="swiper-wrapper">
+                    ${project.images
+                      .map(
+                        (img) => `
+                          <div class="swiper-slide">
+                            <img src="${img}" class="project-img" alt="project" />
+                          </div>
+                        `
+                      )
+                      .join("")}
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+            `
+          )
+          .join("")}
+      </div>
+    </div>
+  `;
+}
+
+
+

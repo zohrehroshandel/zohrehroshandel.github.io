@@ -25,31 +25,27 @@ export function router() {
 }
 
 function initProjectSwipers() {
+	const swiperConfig = {
+		modules: [Navigation, Pagination, Autoplay],
+		slidesPerView: 1,
+		loop: true,
+		autoplay: {
+			delay: 3500,
+			disableOnInteraction: false,
+		},
+		pagination: {
+			clickable: true,
+		},
+	};
+
 	const hanbok = document.querySelector(".hanbokSwiper");
-
 	if (hanbok && !hanbok.swiper) {
-		new Swiper(hanbok, {
-			modules: [Navigation, Pagination, Autoplay],
-			slidesPerView: 1,
-			spaceBetween: 20,
-			loop: true,
-			autoplay: {
-				delay: 3500,
-				disableOnInteraction: false,
-			},
-			pagination: {
-				el: hanbok.querySelector(".swiper-pagination"),
-				clickable: true,
-			},
-		});
+		new Swiper(hanbok, swiperConfig);
 	}
-
 	document.querySelectorAll(".projectSwiper").forEach((swiperEl) => {
 		if (!swiperEl.swiper) {
 			new Swiper(swiperEl, {
-				modules: [Pagination],
-				slidesPerView: 1,
-				spaceBetween: 10,
+				...swiperConfig,
 				pagination: {
 					el: swiperEl.querySelector(".swiper-pagination"),
 					clickable: true,
