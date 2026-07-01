@@ -31,28 +31,29 @@ export const translations = {
 			},
 
 			projects: {
-				title: "My Projects",
+  title: "My Projects",
 
-				hanbok_title: "Hanbok E‑commerce",
-				hanbok_desc:
-					"Full E‑commerce application built with Next.js using Axios and React Query.",
+  hanbok_title: "Hanbok E-commerce Platform",
+  hanbok_desc:
+    "A full e-commerce platform for traditional Korean clothing (Hanbok) built with Next.js. This project uses Axios and React Query for data fetching and state management, with a scalable component-based architecture. This repository is private because the project is intended to become a real platform for the “Iran Hanbok” brand in the future and is not just a portfolio sample.",
 
-				htmlcss_title: "HTML & CSS Practice",
-				htmlcss_desc:
-					"Practice layouts and responsive UI built using pure HTML and CSS.",
+  htmlcss_title: "HTML & CSS Practice",
+  htmlcss_desc:
+    "A collection of UI and layout practice projects focused on improving HTML and CSS skills. The project includes responsive layouts, Flexbox and Grid usage, and clean interface design for different screen sizes.",
 
-				flowershop_title: "Flower Shop",
-				flowershop_desc:
-					"Responsive flower shop pages including home page and login page.",
+  flowershop_title: "Flower Shop",
+  flowershop_desc:
+    "A flower shop user interface project including a landing page, product sections, and user login page. The focus of this project was creating clean layouts, responsive design, and an accessible shopping experience.",
 
-				quiz_title: "Quiz App",
-				quiz_desc:
-					"Quiz application with category based questions using Axios.",
+  quiz_title: "Quiz Application",
+  quiz_desc:
+    "An interactive quiz application that fetches categorized questions from an API using Axios. The project focuses on handling dynamic data, user interaction, and creating a smooth quiz experience.",
 
-				starbucks_title: "Starbucks Store",
-				starbucks_desc:
-					"React based Starbucks ordering interface built with reusable components.",
-			},
+  starbucks_title: "Starbucks Ordering Interface",
+  starbucks_desc:
+    "A React-based Starbucks ordering interface built with reusable components and modern UI practices. This project focuses on component architecture, responsive design, and building a simple and user-friendly ordering experience.",
+}
+,
 			contact_title: "Contact Me",
 			contact_text:
 				"Feel free to reach out if you'd like to collaborate or just say hello.",
@@ -101,28 +102,29 @@ export const translations = {
 			},
 
 			projects: {
-				title: "پروژه‌های من",
+  title: "پروژه‌های من",
 
-				hanbok_title: "فروشگاه آنلاین هانبوک",
-				hanbok_desc:
-					"یک اپلیکیشن کامل فروشگاه آنلاین با Next.js که با Axios و React Query داده‌ها را مدیریت می‌کند.",
+  hanbok_title: "فروشگاه آنلاین هانبوک",
+  hanbok_desc:
+    "یک پلتفرم فروش آنلاین برای لباس سنتی کره‌ای (هانبوک) که با Next.js ساخته شده است. در این پروژه از React Query و Axios برای مدیریت و دریافت داده‌ها استفاده شده و ساختار کامپوننتی برای توسعه‌پذیری در نظر گرفته شده است. این پروژه صرفاً یک نمونه کار نیست و در حال توسعه به عنوان وب‌سایت واقعی برند «Iran Hanbok» است، بنابراین مخزن آن به صورت Private نگهداری می‌شود و در آینده برای فروش و ارائه محتوای مرتبط با هانبوک مورد استفاده قرار خواهد گرفت.",
 
-				htmlcss_title: "تمرین HTML و CSS",
-				htmlcss_desc:
-					"تمرین ساخت لایه‌بندی و رابط کاربری ریسپانسیو با HTML و CSS خالص.",
+  htmlcss_title: "تمرین HTML و CSS",
+  htmlcss_desc:
+    "مجموعه‌ای از تمرین‌های طراحی رابط کاربری برای تقویت مهارت در HTML و CSS. در این پروژه تمرکز روی پیاده‌سازی layout، طراحی ریسپانسیو، استفاده از Flexbox و Grid و ساخت رابط‌های کاربری تمیز و قابل استفاده در اندازه‌های مختلف صفحه بوده است.",
 
-				flowershop_title: "فروشگاه گل",
-				flowershop_desc:
-					"طراحی صفحات فروشگاه گل شامل صفحه اصلی و صفحه ورود کاربر.",
+  flowershop_title: "فروشگاه گل",
+  flowershop_desc:
+    "طراحی رابط کاربری یک فروشگاه گل شامل صفحه اصلی، معرفی محصولات و صفحه ورود کاربر. در این پروژه تلاش شده ساختار صفحات فروشگاهی، چیدمان محصولات و تجربه کاربری ساده و قابل فهم پیاده‌سازی شود.",
 
-				quiz_title: "اپلیکیشن کوییز",
-				quiz_desc:
-					"اپلیکیشن آزمون با سوالات دسته‌بندی شده که با Axios داده‌ها را دریافت می‌کند.",
+  quiz_title: "اپلیکیشن کوییز",
+  quiz_desc:
+    "یک اپلیکیشن آزمون تعاملی که سوالات را از یک API دریافت می‌کند. در این پروژه از Axios برای دریافت داده‌ها استفاده شده و امکان نمایش سوالات دسته‌بندی شده و مدیریت پاسخ‌ها برای کاربر فراهم شده است.",
 
-				starbucks_title: "سفارش استارباکس",
-				starbucks_desc:
-					"رابط سفارش نوشیدنی استارباکس با React و معماری کامپوننتی.",
-			},
+  starbucks_title: "سفارش استارباکس",
+  starbucks_desc:
+    "یک رابط کاربری برای سفارش نوشیدنی‌های استارباکس که با React و معماری کامپوننتی ساخته شده است. تمرکز این پروژه روی طراحی رابط کاربری مدرن، استفاده مجدد از کامپوننت‌ها و ساخت یک تجربه کاربری ساده برای انتخاب و سفارش نوشیدنی‌ها بوده است.",
+}
+,
 			contact_title: "ارتباط با من",
 			contact_text:
 				"اگر علاقه‌مند به همکاری هستید یا سوالی دارید خوشحال می‌شوم با من در ارتباط باشید.",
