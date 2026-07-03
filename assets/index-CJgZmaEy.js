@@ -198,46 +198,73 @@ d="M22 16.9v3a2 2 0 01-2.2 2 19.7 19.7 0 01-8.6-3.1 19.3 19.3 0 01-6-6A19.7 19.7
             `).join(``)}
       </div>
     </div>
-  `}function Yn(){return`
-	<section class="skills-section fade-in">
+  `}var Yn=[{title:`Next.js`,icon:`devicon-nextjs-plain`,items:[`App Router`,`API Routes`,`Server Actions`,`SSR / SSG / ISR / CSR`,`Server Components`,`Suspense`,`Performance Optimization`,`JWT Authentication`]},{title:`React & Ecosystem`,icon:`devicon-react-original`,items:[`JSX`,`Functional Components`,`Hooks`,`Component Architecture`,`Context API`,`Redux / Redux Toolkit`,`Zustand`,`React Router`,`TanStack Query`,`React Hook Form`,`Zod`]},{title:`JavaScript / TypeScript`,icon:`devicon-javascript-plain`,items:[`Modern JavaScript ES6+`,`TypeScript Interfaces`,`TypeScript Generics`,`Promises`,`Async / Await`,`Fetch API`,`Axios`,`DOM Manipulation`,`Functional Programming Concepts`]},{title:`Web Fundamentals`,icon:`devicon-html5-plain`,items:[`REST API`,`JSON`,`JWT Authentication`,`Cookies`,`SPA Concepts`,`Client-Side Rendering`]},{title:`HTML & CSS`,icon:`devicon-css3-plain`,items:[`HTML5`,`Semantic Tags`,`CSS3`,`Responsive Web Design`,`Flexbox`,`CSS Grid`,`Media Queries`,`Animations`]},{title:`UI & Styling`,icon:`devicon-tailwindcss-plain`,items:[`Tailwind CSS`,`Styled-Components`,`CSS Modules`,`Material UI`,`Headless UI`,`ShadCN UI`]},{title:`Tools & Workflow`,icon:`devicon-git-plain`,items:[`Git`,`GitFlow`,`GitHub`,`npm / yarn / pnpm`,`Postman`,`Figma`,`Vite`,`MongoDB`]}],Xn=[{title:`Frontend Web Development`,issuer:`مکتب شریف (Maktab Sharif)`,date:`1403`,link:`https://maktabsharif.ir/136-Zohreh-Roshandel`,icon:`🎓`,qrImage:`src/assets/qr/maktab-sharif.png`,fullImage:`src/assets/certs/maktab-sharif.jpg`}];function Zn(){return`
+    <section class="certs-section ">
+      <div class="skills-hero glass-card">
+        <span class="skills-eyebrow">Credentials</span>
+        <h2 class="section-title">📜 Certificates</h2>
+        <p class="skills-intro">Scan or click to verify and view the certificate.</p>
+      </div>
 
-		<div class="skills-hero glass-card">
-			<span class="skills-eyebrow">Technical Stack</span>
-			<h2 class="section-title">✨ ${L.t(`skills_title`)}</h2>
-			<p class="skills-intro">
-				A practical frontend skill set focused on building responsive, modern, scalable and user-friendly web applications.
-			</p>
-		</div>
+      <div class="certs-grid">
+        ${Xn.map(e=>`
+              <article class="cert-card glass-card">
+                <a class="cert-qr-link" href="${e.link}" target="_blank" rel="noopener noreferrer" aria-label="Open certificate link: ${e.title}">
+                  <div class="cert-qr-frame">
+                    <img class="cert-qr" src="${e.qrImage}" alt="QR code for ${e.title}" loading="lazy" />
+                  </div>
+                </a>
 
-		<div class="skills-modern-grid">
-			${[{title:`Next.js`,icon:`devicon-nextjs-plain`,items:[`App Router`,`API Routes`,`Server Actions`,`SSR / SSG / ISR / CSR`,`Server Components`,`Suspense`,`Performance Optimization`,`JWT Authentication`]},{title:`React & Ecosystem`,icon:`devicon-react-original`,items:[`JSX`,`Functional Components`,`Hooks`,`Component Architecture`,`Context API`,`Redux / Redux Toolkit`,`Zustand`,`React Router`,`TanStack Query`,`React Hook Form`,`Zod`]},{title:`JavaScript / TypeScript`,icon:`devicon-javascript-plain`,items:[`Modern JavaScript ES6+`,`TypeScript Interfaces`,`TypeScript Generics`,`Promises`,`Async / Await`,`Fetch API`,`Axios`,`DOM Manipulation`,`Functional Programming Concepts`]},{title:`Web Fundamentals`,icon:`devicon-html5-plain`,items:[`REST API`,`JSON`,`JWT Authentication`,`Cookies`,`SPA Concepts`,`Client-Side Rendering`]},{title:`HTML & CSS`,icon:`devicon-css3-plain`,items:[`HTML5`,`Semantic Tags`,`CSS3`,`Responsive Web Design`,`Flexbox`,`CSS Grid`,`Media Queries`,`Animations`]},{title:`UI & Styling`,icon:`devicon-tailwindcss-plain`,items:[`Tailwind CSS`,`Styled-Components`,`CSS Modules`,`Material UI`,`Headless UI`,`ShadCN UI`]},{title:`Tools & Workflow`,icon:`devicon-git-plain`,items:[`Git`,`GitFlow`,`GitHub`,`npm / yarn / pnpm`,`Postman`,`Figma`,`Vite`,`MongoDB`]}].map(e=>`
-					<article class="skill-detail-card">
-						<div class="skill-card-top">
-							<div class="skill-main-icon">
-								<i class="${e.icon} colored"></i>
-							</div>
+                <div class="cert-content">
+                  <div class="cert-icon">${e.icon??`🎓`}</div>
+                  <h3>${e.title}</h3>
+                  <p>${e.issuer}</p>
+                  <p class="cert-meta">${e.date}</p>
 
-							<div>
-								<h3>${e.title}</h3>
-								<span>${e.items.length} topics</span>
-							</div>
-						</div>
+                  <div class="cert-actions">
+                    <a class="btn btn-primary cert-btn" href="${e.link}" target="_blank" rel="noopener noreferrer">Open verification link</a>
+                    ${e.fullImage?`<a class="btn btn-outline cert-btn" href="${e.fullImage}" target="_blank" rel="noopener noreferrer">View certificate image</a>`:``}
+                  </div>
+                </div>
+              </article>
+            `).join(``)}
+      </div>
+    </section>
+  `}function Qn(){return`
+    <section class="skills-section fade-in">
+      <div class="skills-hero glass-card">
+        <span class="skills-eyebrow">Technical Stack</span>
+        <h2 class="section-title">✨ ${L.t(`skills_title`)}</h2>
+        <p class="skills-intro">
+          A practical frontend skill set focused on building responsive, modern, scalable and user-friendly web applications.
+        </p>
+      </div>
 
-						<div class="skill-tags">
-							${e.items.map(e=>`
-									<span class="skill-tag">
-										${e}
-									</span>
-								`).join(``)}
-						</div>
-					</article>
-				`).join(``)}
-		</div>
+      <div class="skills-modern-grid">
+        ${Yn.map(e=>`
+              <article class="skill-detail-card">
+                <div class="skill-card-top">
+                  <div class="skill-main-icon">
+                    <i class="${e.icon} colored"></i>
+                  </div>
+                  <div>
+                    <h3>${e.title}</h3>
+                    <span>${e.items.length} topics</span>
+                  </div>
+                </div>
 
-	</section>
-	`}var Xn={"/":Wn,"/about":Ln,"/skills":Yn,"/contact":Vn,"/projects":Jn};function Zn(){return Xn[window.location.pathname]||Wn}function Qn(){let e={modules:[Pn,Fn,In],slidesPerView:1,loop:!0,autoplay:{delay:3500,disableOnInteraction:!1},pagination:{clickable:!0}},t=document.querySelector(`.hanbokSwiper`);t&&!t.swiper&&new Z(t,e),document.querySelectorAll(`.projectSwiper`).forEach(t=>{t.swiper||new Z(t,{...e,pagination:{el:t.querySelector(`.swiper-pagination`),clickable:!0}})})}function $n(e){function t(){e(),setTimeout(()=>{window.location.pathname===`/projects`&&Qn()},50)}window.addEventListener(`click`,e=>{let n=e.target.closest(`[data-link]`);if(!n)return;e.preventDefault();let r=n.getAttribute(`href`);window.history.pushState(null,``,r),t()}),window.addEventListener(`popstate`,()=>{t()})}window.addEventListener(`initProjects`,()=>{Qn()});function er(){let e=document.documentElement.classList.toggle(`dark`);localStorage.setItem(`theme`,e?`dark`:`light`);let t=document.getElementById(`themeBtn`);t&&(t.textContent=e?`☀️`:`🌙`)}function tr(){let e=localStorage.getItem(`theme`);e===`dark`&&document.documentElement.classList.add(`dark`);let t=document.getElementById(`themeBtn`);t&&(t.textContent=e===`dark`?`☀️`:`🌙`)}function nr(){let e=L.language?.includes(`fa`)?`fa`:`en`;document.documentElement.dir=e===`fa`?`rtl`:`ltr`,document.documentElement.lang=e;let t=Zn();document.querySelector(`#app`).innerHTML=`
+                <div class="skill-tags">
+                  ${e.items.map(e=>`<span class="skill-tag">${e}</span>`).join(``)}
+                </div>
+              </article>
+            `).join(``)}
+      </div>
+
+      ${Zn()}
+    </section>
+  `}var $n={"/":Wn,"/about":Ln,"/skills":Qn,"/contact":Vn,"/projects":Jn};function er(){return $n[window.location.pathname]||Wn}function tr(){let e={modules:[Pn,Fn,In],slidesPerView:1,loop:!0,autoplay:{delay:3500,disableOnInteraction:!1},pagination:{clickable:!0}},t=document.querySelector(`.hanbokSwiper`);t&&!t.swiper&&new Z(t,e),document.querySelectorAll(`.projectSwiper`).forEach(t=>{t.swiper||new Z(t,{...e,pagination:{el:t.querySelector(`.swiper-pagination`),clickable:!0}})})}function nr(e){function t(){e(),setTimeout(()=>{window.location.pathname===`/projects`&&tr()},50)}window.addEventListener(`click`,e=>{let n=e.target.closest(`[data-link]`);if(!n)return;e.preventDefault();let r=n.getAttribute(`href`);window.history.pushState(null,``,r),t()}),window.addEventListener(`popstate`,()=>{t()})}window.addEventListener(`initProjects`,()=>{tr()});function rr(){let e=document.documentElement.classList.toggle(`dark`);localStorage.setItem(`theme`,e?`dark`:`light`);let t=document.getElementById(`themeBtn`);t&&(t.textContent=e?`☀️`:`🌙`)}function ir(){let e=localStorage.getItem(`theme`);e===`dark`&&document.documentElement.classList.add(`dark`);let t=document.getElementById(`themeBtn`);t&&(t.textContent=e===`dark`?`☀️`:`🌙`)}function ar(){let e=L.language?.includes(`fa`)?`fa`:`en`;document.documentElement.dir=e===`fa`?`rtl`:`ltr`,document.documentElement.lang=e;let t=er();document.querySelector(`#app`).innerHTML=`
     ${ze()}
     <main id="main-content">
       ${t()}
     </main>
-  `,document.getElementById(`langBtn`)?.addEventListener(`click`,rr),document.getElementById(`themeBtn`)?.addEventListener(`click`,er),tr(),window.location.pathname===`/projects`&&setTimeout(()=>{let e=new Event(`initProjects`);window.dispatchEvent(e)},50)}function rr(){let e=L.language?.includes(`fa`)?`en`:`fa`;L.changeLanguage(e,nr)}$n(nr),Re(nr);
+  `,document.getElementById(`langBtn`)?.addEventListener(`click`,or),document.getElementById(`themeBtn`)?.addEventListener(`click`,rr),ir(),window.location.pathname===`/projects`&&setTimeout(()=>{let e=new Event(`initProjects`);window.dispatchEvent(e)},50)}function or(){let e=L.language?.includes(`fa`)?`en`:`fa`;L.changeLanguage(e,ar)}nr(ar),Re(ar);
