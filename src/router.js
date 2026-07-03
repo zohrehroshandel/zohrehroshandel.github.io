@@ -19,8 +19,12 @@ const routes = {
 	"/projects": Projects,
 };
 
+function getPath() {
+	return window.location.hash.replace("#", "") || "/";
+}
+
 export function router() {
-	const path = window.location.pathname;
+	const path = getPath();
 	return routes[path] || Hero;
 }
 
@@ -42,6 +46,7 @@ function initProjectSwipers() {
 	if (hanbok && !hanbok.swiper) {
 		new Swiper(hanbok, swiperConfig);
 	}
+
 	document.querySelectorAll(".projectSwiper").forEach((swiperEl) => {
 		if (!swiperEl.swiper) {
 			new Swiper(swiperEl, {
@@ -60,7 +65,7 @@ export function initRouter(render) {
 		render();
 
 		setTimeout(() => {
-			if (window.location.pathname === "/projects") {
+			if (getPath() === "/projects") {
 				initProjectSwipers();
 			}
 		}, 50);
@@ -73,16 +78,19 @@ export function initRouter(render) {
 		e.preventDefault();
 
 		const href = link.getAttribute("href");
+		window.location.hash = href;
+	});
 
-		window.history.pushState(null, "", href);
-
+	window.addEventListener("hashchange", () => {
 		handleRoute();
 	});
 
-	window.addEventListener("popstate", () => {
+	window.addEventListener("load", () => {
 		handleRoute();
 	});
 }
+
 window.addEventListener("initProjects", () => {
 	initProjectSwipers();
 });
+
