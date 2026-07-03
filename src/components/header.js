@@ -20,11 +20,9 @@ export function Header() {
         <a href="/contact" data-link class="nav-link ${path === "/contact" ? "active" : ""}">
           ${i18next.t("nav.contact")}
         </a>
-        <a href="/projects" data-link 
-  class="nav-link ${path === "/projects" ? "active" : ""}">
-  ${i18next.t("nav.projects")}
-</a>
-
+        <a href="/projects" data-link class="nav-link ${path === "/projects" ? "active" : ""}">
+          ${i18next.t("nav.projects")}
+        </a>
       </nav>
 
       <div class="header-actions">
@@ -32,10 +30,11 @@ export function Header() {
           ${i18next.t("toggle_lang")}
         </button>
 
-        <button class="btn theme-btn" id="themeBtn">
+        <button class="btn theme-btn" id="themeBtn" aria-label="Toggle Theme">
           🌓
         </button>
       </div>
     </header>
   `;
 }
+
