@@ -895,3 +895,7 @@ body {
 	display: flex;
 	flex-direction: column;
 }
+html:not(.dark) .cert-qr {
+  filter: invert(1);
+  mix-blend-mode: multiply; 
+}
