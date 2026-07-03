@@ -109,7 +109,7 @@ d="M22 16.9v3a2 2 0 01-2.2 2 19.7 19.7 0 01-8.6-3.1 19.3 19.3 0 01-6-6A19.7 19.7
     </div>
 
   </section>
-  `}var Hn=`/assets/resume-ASpvPYQo.pdf`,Un=`/assets/my-photo-DCcXCHdB.png`;function Wn(){return`
+  `}var Hn=`/portfolio/assets/resume-ASpvPYQo.pdf`,Un=`/portfolio/assets/my-photo-DCcXCHdB.png`;function Wn(){return`
     <section class="hero-container fade-in">
       <div class="hero-content">
         <div class="hero-image-wrapper">
