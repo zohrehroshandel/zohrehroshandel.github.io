@@ -15,11 +15,9 @@
         <a href="/contact" data-link class="nav-link ${e===`/contact`?`active`:``}">
           ${L.t(`nav.contact`)}
         </a>
-        <a href="/projects" data-link 
-  class="nav-link ${e===`/projects`?`active`:``}">
-  ${L.t(`nav.projects`)}
-</a>
-
+        <a href="/projects" data-link class="nav-link ${e===`/projects`?`active`:``}">
+          ${L.t(`nav.projects`)}
+        </a>
       </nav>
 
       <div class="header-actions">
@@ -27,7 +25,7 @@
           ${L.t(`toggle_lang`)}
         </button>
 
-        <button class="btn theme-btn" id="themeBtn">
+        <button class="btn theme-btn" id="themeBtn" aria-label="Toggle Theme">
           🌓
         </button>
       </div>
