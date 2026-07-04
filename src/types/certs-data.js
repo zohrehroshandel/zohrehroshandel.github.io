@@ -4,8 +4,8 @@ export const certs = [
 		date: "1403",
 		link: "https://maktabsharif.ir/136-Zohreh-Roshandel",
 		icon: "🎓",
-		qrImage: "qr/Maktab-sharif.png",
-		fullImage: "certs/Maktab-sharif.jpg",
+		qrImage: "qr/maktab-sharif.png",
+		fullImage: "certs/maktab-sharif.jpg",
 	},
 	{
 		id: "kalami",
