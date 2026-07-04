@@ -23,7 +23,9 @@ function render() {
 	document.getElementById("themeBtn")?.addEventListener("click", toggleTheme);
 
 	loadTheme();
-	if (window.location.pathname === "/projects") {
+	
+	const hash = window.location.hash.slice(1) || "/";
+	if (hash === "/projects") {
 		setTimeout(() => {
 			const event = new Event("initProjects");
 			window.dispatchEvent(event);
@@ -38,3 +40,4 @@ function changeLanguage() {
 
 initRouter(render);
 initI18n(render);
+

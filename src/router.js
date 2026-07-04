@@ -20,8 +20,8 @@ const routes = {
 };
 
 export function router() {
-	const path = window.location.pathname;
-	return routes[path] || Hero;
+	const hash = window.location.hash.slice(1) || "/";
+	return routes[hash] || Hero;
 }
 
 function initProjectSwipers() {
@@ -60,7 +60,8 @@ export function initRouter(render) {
 		render();
 
 		setTimeout(() => {
-			if (window.location.pathname === "/projects") {
+			const hash = window.location.hash.slice(1) || "/";
+			if (hash === "/projects") {
 				initProjectSwipers();
 			}
 		}, 50);
@@ -74,15 +75,15 @@ export function initRouter(render) {
 
 		const href = link.getAttribute("href");
 
-		window.history.pushState(null, "", href);
-
-		handleRoute();
+		window.location.hash = href;
 	});
 
-	window.addEventListener("popstate", () => {
-		handleRoute();
-	});
+	window.addEventListener("hashchange", handleRoute);
+	window.addEventListener("DOMContentLoaded", handleRoute);
 }
+
 window.addEventListener("initProjects", () => {
 	initProjectSwipers();
 });
+
+
