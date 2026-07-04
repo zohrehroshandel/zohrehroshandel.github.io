@@ -23,10 +23,7 @@ function render() {
 	document.getElementById("themeBtn")?.addEventListener("click", toggleTheme);
 
 	loadTheme();
-
-	const path = window.location.hash.replace("#", "") || "/";
-
-	if (path === "/projects") {
+	if (window.location.pathname === "/projects") {
 		setTimeout(() => {
 			const event = new Event("initProjects");
 			window.dispatchEvent(event);

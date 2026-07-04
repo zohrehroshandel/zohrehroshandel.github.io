@@ -19,12 +19,8 @@ const routes = {
 	"/projects": Projects,
 };
 
-function getPath() {
-	return window.location.hash.replace("#", "") || "/";
-}
-
 export function router() {
-	const path = getPath();
+	const path = window.location.pathname;
 	return routes[path] || Hero;
 }
 
@@ -64,7 +60,7 @@ export function initRouter(render) {
 		render();
 
 		setTimeout(() => {
-			if (getPath() === "/projects") {
+			if (window.location.pathname === "/projects") {
 				initProjectSwipers();
 			}
 		}, 50);
@@ -78,18 +74,15 @@ export function initRouter(render) {
 
 		const href = link.getAttribute("href");
 
-		window.location.hash = href;
-	});
+		window.history.pushState(null, "", href);
 
-	window.addEventListener("hashchange", () => {
 		handleRoute();
 	});
 
-	window.addEventListener("load", () => {
+	window.addEventListener("popstate", () => {
 		handleRoute();
 	});
 }
-
 window.addEventListener("initProjects", () => {
 	initProjectSwipers();
 });

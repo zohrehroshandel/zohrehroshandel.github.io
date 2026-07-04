@@ -1,7 +1,7 @@
 import i18next from "../i18n/index.js";
 
 export function Header() {
-	const path = window.location.hash.replace("#", "") || "/";
+	const path = window.location.pathname;
 
 	return `
     <header class="header">
@@ -37,3 +37,4 @@ export function Header() {
     </header>
   `;
 }
+
