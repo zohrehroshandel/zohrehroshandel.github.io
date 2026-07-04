@@ -93,4 +93,3 @@ export function initRouter(render) {
 window.addEventListener("initProjects", () => {
 	initProjectSwipers();
 });
-
