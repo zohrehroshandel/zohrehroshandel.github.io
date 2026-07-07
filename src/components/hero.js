@@ -7,8 +7,8 @@ export function Hero() {
     <section class="hero-container fade-in">
       <div class="hero-content">
         <div class="hero-image-wrapper">
-   <img 
-              src="${profileImage}" 
+          <img 
+            src="${profileImage}" 
             alt="${i18next.t("name")}" 
             class="profile-img"
           >
@@ -46,11 +46,12 @@ export function Hero() {
 								: "Frontend developer with a passion for building beautiful and modern user experiences."
 						}
           </p>
- <a href="${resumeFile}" download class="btn btn-primary">
-    ${i18next.language.includes("fa") ? "دانلود رزومه" : "Download Resume"}
-  </a>
+          <a href="${resumeFile}" download class="btn btn-primary">
+            ${i18next.language.includes("fa") ? "دانلود رزومه" : "Download Resume"}
+          </a>
         </div>
       </div>
     </section>
   `;
 }
+
