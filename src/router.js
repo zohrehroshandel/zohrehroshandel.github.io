@@ -10,13 +10,15 @@ import { Contact } from "./components/contact.js";
 import { Hero } from "./components/hero.js";
 import { Projects } from "./components/projects.js";
 import { Skills } from "./components/skills.js";
+import { Certificates } from "./components/certificates.js";
 
 const routes = {
-	"/": Hero,
-	"/about": About,
-	"/skills": Skills,
-	"/contact": Contact,
-	"/projects": Projects,
+  "/": Hero,
+  "/about": About,
+  "/skills": Skills,
+  "/certificates": Certificates,
+  "/contact": Contact,
+  "/projects": Projects,
 };
 
 export function router() {

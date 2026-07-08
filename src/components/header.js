@@ -23,6 +23,9 @@ export function Header() {
         <a href="/projects" data-link class="nav-link ${path === "/projects" ? "active" : ""}">
           ${i18next.t("nav.projects")}
         </a>
+        <a href="/certificates" data-link class="nav-link ${path === "/certificates" ? "active" : ""}">
+  ${i18next.t("certs.section_title")}
+</a>
       </nav>
 
       <div class="header-actions">
@@ -37,5 +40,3 @@ export function Header() {
     </header>
   `;
 }
-
-

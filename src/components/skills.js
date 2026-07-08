@@ -1,7 +1,5 @@
 import i18next from "../i18n/index.js";
 import { skillGroups } from "../types/skil-data.js";
-import { Certificates } from "./certificates.js";
-
 
 export function Skills() {
   return `
@@ -37,8 +35,6 @@ export function Skills() {
           )
           .join("")}
       </div>
-
-      ${Certificates()}
     </section>
   `;
 }

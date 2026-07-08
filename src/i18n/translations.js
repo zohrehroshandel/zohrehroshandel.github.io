@@ -32,7 +32,7 @@ export const translations = {
 
 			certs: {
 				section_eyebrow: "Credentials",
-				section_title: "📜 Certificates",
+				section_title: " Certificates",
 				section_intro: "Scan or click to verify and view the certificate.",
 				verify_link: "Open verification link",
 				view_image: "View certificate image",
@@ -82,7 +82,7 @@ export const translations = {
 			view_linkedin: "View LinkedIn",
 			view_github: "View GitHub",
 
-			toggle_lang: "فارسی",
+			toggle_lang: "fa",
 		},
 	},
 
@@ -120,7 +120,7 @@ export const translations = {
 
 			certs: {
 				section_eyebrow: "اعتبارنامه‌ها",
-				section_title: "📜 مدارک تحصیلی و دوره‌ها",
+				section_title: " مدارک تحصیلی و دوره‌ها",
 				section_intro: "برای تایید یا مشاهده مدرک، کد QR را اسکن کنید یا روی کارت کلیک کنید.",
 				verify_link: "ورود به لینک تاییدیه مدرک",
 				view_image: "مشاهده تصویر مدرک",
@@ -170,7 +170,7 @@ export const translations = {
 			view_linkedin: "مشاهده لینکدین",
 			view_github: "مشاهده گیت‌هاب",
 
-			toggle_lang: "English",
+			toggle_lang: "En",
 		},
 	},
 };
