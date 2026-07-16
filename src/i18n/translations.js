@@ -13,12 +13,21 @@ export const translations = {
 			},
 
 			about_title: "About Me",
-			about_text:
-				"I am Zohreh Roshandel, a Frontend Developer focused on building modern, responsive, and user-friendly web interfaces. I have successfully completed the React and Next.js bootcamp at Maktab Sharif, where I worked with concepts such as component-based architecture, React Hooks, routing, state management, API integration, authentication, and modern rendering strategies in Next.js. I have also completed Programming Fundamentals by Dr. Mostafa Kalami Heris and JavaScript training by Mohammad Abdollahi through Faradars. My goal is to keep improving through real-world projects and create clean, scalable, and practical web experiences.",
+			about_badge: "Profile",
 
-			stats: {
-				months: "Months of Learning & Practice",
-				projects: "Completed Projects",
+			about_text:
+				"I am Zohreh Roshandel, a Frontend Developer focused on building modern, responsive, and user-friendly web interfaces. I have completed the React and Next.js bootcamp at Maktab Sharif and continue improving through real-world projects and practical web experiences.",
+
+			about_cards: {
+				current_title: "Current Focus",
+				current_text:
+					"My current focus is frontend development with React and Next.js, building clean, scalable, and responsive user interfaces.",
+				future_title: "Next Year Goal",
+				future_text:
+					"Next year, I plan to start learning Machine Learning and AI to expand my technical knowledge alongside my frontend background.",
+				education_title: "Academic Plan",
+				education_text:
+					"I also intend to continue my studies in a field related to my work so I can grow academically and professionally in a connected path.",
 			},
 
 			skills_title: "Technical Skills",
@@ -100,12 +109,21 @@ export const translations = {
 			},
 
 			about_title: "درباره من",
-			about_text:
-				"من زهره روشندل، توسعه‌دهنده فرانت‌اند هستم و روی ساخت رابط‌های کاربری مدرن، ریسپانسیو و کاربرپسند تمرکز دارم. بوت‌کمپ React و Next.js مکتب شریف را با موفقیت به پایان رسانده‌ام و در این مسیر با مفاهیمی مثل معماری کامپوننتی، هوک‌های React، مسیریابی، مدیریت وضعیت، اتصال به API، احراز هویت و استراتژی‌های رندرینگ در Next.js کار کرده‌ام. همچنین دوره مبانی برنامه‌نویسی دکتر مصطفی کلامی هریس و دوره آموزش JavaScript محمد عبداللهی را از فرادرس گذرانده‌ام. هدف من رشد مداوم از طریق پروژه‌های واقعی و ساخت تجربه‌های وب تمیز، کاربردی و توسعه‌پذیر است.",
+			about_badge: "پروفایل",
 
-			stats: {
-				months: "ماه یادگیری و تمرین",
-				projects: "پروژه‌های تکمیل‌شده",
+			about_text:
+				"من زهره روشندل، توسعه‌دهنده فرانت‌اند هستم و روی ساخت رابط‌های کاربری مدرن، ریسپانسیو و کاربرپسند تمرکز دارم. بوت‌کمپ React و Next.js مکتب شریف را گذرانده‌ام و مسیر رشد خودم را با پروژه‌های واقعی و ساخت تجربه‌های وب تمیز و کاربردی ادامه می‌دهم.",
+
+			about_cards: {
+				current_title: "تمرکز فعلی",
+				current_text:
+					"تمرکز فعلی من روی توسعه فرانت‌اند با React و Next.js و ساخت رابط‌های کاربری تمیز، توسعه‌پذیر و ریسپانسیو است.",
+				future_title: "هدف سال آینده",
+				future_text:
+					"قصد دارم از سال آینده یادگیری Machine Learning و AI را شروع کنم تا در کنار مسیر فرانت‌اند، دانش فنی خودم را گسترش بدهم.",
+				education_title: "برنامه تحصیلی",
+				education_text:
+					"همچنین می‌خواهم در رشته‌ای مرتبط با زمینه کاری‌ام ادامه تحصیل بدهم تا مسیر شغلی و تحصیلی من در یک جهت کامل‌تر رشد کند.",
 			},
 
 			skills_title: "مهارت‌های فنی",
@@ -121,7 +139,8 @@ export const translations = {
 			certs: {
 				section_eyebrow: "اعتبارنامه‌ها",
 				section_title: " مدارک تحصیلی و دوره‌ها",
-				section_intro: "برای تایید یا مشاهده مدرک، کد QR را اسکن کنید یا روی کارت کلیک کنید.",
+				section_intro:
+					"برای تایید یا مشاهده مدرک، کد QR را اسکن کنید یا روی کارت کلیک کنید.",
 				verify_link: "ورود به لینک تاییدیه مدرک",
 				view_image: "مشاهده تصویر مدرک",
 				items: {
@@ -174,4 +193,3 @@ export const translations = {
 		},
 	},
 };
-
