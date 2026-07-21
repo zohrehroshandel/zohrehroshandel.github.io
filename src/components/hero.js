@@ -3,6 +3,9 @@ import profileImage from "../assets/images/my-photo.png";
 import i18next from "../i18n/index.js";
 
 export function Hero() {
+	const isFa = i18next.language.includes("fa");
+	const downloadName = isFa ? "رزومه زهره روشندل.pdf" : "Zohreh_Roshandel_Resume.pdf";
+
 	return `
     <section class="hero-container fade-in">
       <div class="hero-content">
@@ -41,17 +44,18 @@ export function Hero() {
 
           <p class="hero-description">
             ${
-							i18next.language.includes("fa")
+							isFa
 								? "توسعه‌دهنده فرانت‌اندم با علاقه به ساخت تجربه‌های کاربری زیبا و مدرن."
 								: "Frontend developer with a passion for building beautiful and modern user experiences."
 						}
           </p>
-          <a href="${resumeFile}" download class="btn btn-primary">
-            ${i18next.language.includes("fa") ? "دانلود رزومه" : "Download Resume"}
+          <a href="${resumeFile}" download="${downloadName}" class="btn btn-primary">
+            ${isFa ? "دانلود رزومه" : "Download Resume"}
           </a>
         </div>
       </div>
     </section>
   `;
 }
+
 

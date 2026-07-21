@@ -1,0 +1,38 @@
+.btn {
+	padding: 12px 24px;
+	border-radius: 12px;
+	border: none;
+	cursor: pointer;
+	font-weight: 600;
+	font-size: 0.95rem;
+	transition: all 0.25s ease;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+}
+
+.btn:hover {
+	transform: translateY(-2px);
+}
+
+.btn-primary {
+	background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%);
+	color: white;
+	box-shadow: 0 8px 16px -6px rgba(168, 85, 247, 0.5);
+}
+
+.btn-primary:hover {
+	box-shadow: 0 12px 20px -6px rgba(168, 85, 247, 0.6);
+}
+
+.btn-outline {
+	background: transparent;
+	border: 1px solid var(--accent);
+	color: var(--text);
+}
+
+.btn-outline:hover {
+	background: var(--accent);
+	color: white;
+}

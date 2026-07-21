@@ -1,0 +1,17 @@
+body {
+	background-color: var(--bg);
+	color: var(--text);
+	font-family: "Inter", "Vazirmatn", sans-serif;
+	margin: 0;
+	padding: 10px;
+	box-sizing: border-box;
+	transition:
+		background-color 0.3s ease,
+		color 0.3s ease;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}

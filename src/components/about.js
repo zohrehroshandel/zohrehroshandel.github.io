@@ -34,13 +34,13 @@ export function About() {
 
           <div class="stats-grid">
             <div class="stat-item">
-              <span class="stat-num">9</span>
-              <span class="stat-label">${i18next.t("stats.months")}</span>
+              <span class="stat-num">${i18next.t("stats.learning_duration_num")}</span>
+              <span class="stat-label">${i18next.t("stats.learning_duration_text")}</span>
             </div>
 
             <div class="stat-item">
-              <span class="stat-num">3+</span>
-              <span class="stat-label">${i18next.t("stats.projects")}</span>
+              <span class="stat-num">${i18next.t("stats.projects_portfolio_num")}</span>
+              <span class="stat-label">${i18next.t("stats.projects_portfolio_text")}</span>
             </div>
           </div>
         </div>
@@ -48,5 +48,6 @@ export function About() {
     </section>
   `;
 }
+
 
 
